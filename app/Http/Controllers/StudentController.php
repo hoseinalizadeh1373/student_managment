@@ -39,8 +39,8 @@ class StudentController extends Controller
     {
         $student = new Student ();
         $student->cne=$request->input('cne');
-        $student->firstname=$request->input('firstname');
-        $student->lastaname=$request->input('lastname');
+        $student->firstname=$request->input('firstName');
+        $student->lastname=$request->input('lastname');
         $student->age=$request->input('age');
         $student->speciality=$request->input('speciality');
         $student->save();
@@ -89,7 +89,7 @@ class StudentController extends Controller
         $student = student::find($id);
         $student->cne=$request->input('cne');
         $student->firstname=$request->input('firstname');
-        $student->lastaname=$request->input('lastname');
+        $student->lastname=$request->input('lastname');
         $student->age=$request->input('age');
         $student->speciality=$request->input('speciality');
         $student->save();

@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 */
 Route::get('/',[StudentController::class,'index']);
-Route::get('/edit/{id}',"StudentController@edit");
+Route::get('/edit/{id}',[StudentController::class,'edit']);
 Route::get('/show/{id}',"StudentController@show");
-Route::get('/create/{id}',"StudentController@create");
-Route::post('/store',"StudentController@store");
-Route::post('/update/{id}',"StudentController@update");
+Route::get('/create ',[StudentController::class,'create']);
+Route::post('/store',[StudentController::class,'store']);
+Route::post('/update/{id}',[StudentController::class,'update']);
