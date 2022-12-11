@@ -11,7 +11,19 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+
+
+    @if($layout=='index')
+    <div class="container">
+      <section>
+        @include('studentslist')
+      </section>
+      <section></section>
+    </div>
+    @elseif($layout=='create')
+    @elseif($layout=='show')
+    @elseif($layout=='edit')
+    @endif
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
